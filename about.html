@@ -13,51 +13,72 @@
   </head>
   <body>
     <div class="portfolio-container">
-    <div class="page-container">
         <header class="site-header">
             <h1 class="site-title"><a href="index.html"><img src="images/sig.png" width="81" height="100"></a></h1>
             <nav class="site-navigation">
-              <p class="nav-links">Projects <a href="about.html">About</a></p>
+              <p class="nav-links"><a href="index.html">Home</a> | <a href="index.html#projects">Projects</a> | <a href="about.html">About</a></p>
             </nav>
           </header>
       </header>
       <br>
 
-      <section class="banner-section">
-        <img
-          src="images/bridge.png"
-          alt="Banner"
-          class="banner-image"
-        />
-        <div class="banner-overlay"></div>
-        <h2 class="banner-title">About Me.</h2>
-      </section>
+  
 
       <main class="main-content">
         <section class="about-section">
+
+        <div class="image-overlay-container">
+          <img src="images/bridge.png" alt="Kenyatta standing on a bridge surrounded by plants">
+          <div class="overlay"></div>
+          <div class="overlay-text">About me.</div>
+        </div>
+
           <p class="bio-text">
             Hi, I'm Kenyatta. I'm a UX designer in North Carolina who loves
             telling stories, solving problems, and creating delightful
-            experiences that connect people with the information they need. I
-            have a background in librarianship that's made me develop a passion
+            experiences that connect people with the information they need.
+            <br>
+          I have a background in librarianship that's made me develop a passion
             for ensuring information gets into the hands of those who need it.
             This has influenced my goal to design solutions that are useful,
-            inclusive, and a joy to use. When I'm not working on design
+            inclusive, and a joy to use.
+          <br>            
+          When I'm not working on design
             problems, you can find me reading, painting, or feeding the
             neighborhood crows.
           </p>
+          
           <div class="activity-cards">
             <article class="activity-card">
               <h3>Currently Reading</h3>
+              <a href="https://www.goodreads.com/book/show/52698452-the-book-of-longings?from_search=true&from_srp=true&qid=KqXA3g1La2&rank=1">The Book of Longings</a> by Sue Monk Kidd
             </article>
             <article class="activity-card">
               <h3>Currently Learning</h3>
+              <a href="https://www.linkedin.com/learning-login/share?account=56744281&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fusing-ai-in-the-ux-design-process%3Ftrk%3Dshare_ent_url%26shareId%3D4dQ2I7bJTB2wgf5Dzuo1Dw%253D%253D">Using AI in the UX Design Process</a> via LinkedIn Learning
             </article>
             <article class="activity-card">
               <h3>Currently Working On</h3>
+              <a href="https://www.figma.com/proto/qIHXrN1sE4H8PlRpOO87YR/MOTi--Copy-?node-id=50-300&t=nFNrLh0jGGxxK5K8-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=50%3A300">Moti</a>, an emotional regulation app for children
             </article>
           </div>
         </section>
+        <section class="contact-section">
+          <h2>Contact Me</h2>
+          <form class="contact-form" action="mailto:kdladd@my.waketech.edu" method="POST" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+        
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+        <footer>&copy; Kenyatta Ladd 2025</footer>
       </main>
     </div>
 
