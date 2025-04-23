@@ -1,8 +1,7 @@
-/* Base styles */
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   margin: 0;
@@ -53,11 +52,13 @@ body {
 .nav-links {
   font-size: 30px;
   margin: 0;
+  
 }
 
 .nav-links a {
   text-decoration: none;
   color: #000000;
+  color: rgba(208, 216, 193, 1);
 }
 
 
@@ -154,9 +155,10 @@ body {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  gap: 24px; /* Optional spacing between items */
-  padding-bottom: 16px; /* Prevents last item from getting cut off */
-  scrollbar-width: thin; /* Firefox */
+  gap: 24px;
+  padding-bottom: 16px;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
 }
 
 .project-header::-webkit-scrollbar {
@@ -173,13 +175,13 @@ body {
 }
 
 .polaroid {
-  flex: 0 0 auto; /* Prevent flex from shrinking or growing */
+  flex: 0 0 auto;
   width: 400px;
 }
 
-.project-header {
+/* .project-header {
   scroll-snap-type: x mandatory;
-}
+} */
 
 .polaroid {
   scroll-snap-align: start;
@@ -353,124 +355,6 @@ body {
 }
 
 
-/* Media queries for responsive design */
-/* @media (max-width: 991px) {
-  .portfolio-container {
-    padding-bottom: 100px;
-  }
-
-  .site-header {
-    max-width: 100%;
-  }
-
-  .site-title {
-    font-size: 40px;
-  }
-
-  .main-content {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0px;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    margin-top: 40px;
-    font-size: 40px;
-  }
-
-  .greeting {
-    font-size: 40px;
-  }
-
-  .introduction {
-    margin-top: 40px;
-    font-size: 40px;
-  }
-
-  .description {
-    max-width: 100%;
-  }
-
-  .hero-image-container {
-    width: 100%;
-  }
-
-  .hero-image {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .projects-heading {
-    margin-top: 40px;
-    font-size: 40px;
-  }
-
-  .projects-section {
-    max-width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 100px;
-    margin-top: 40px;
-  }
-
-  .project-header {
-    max-width: 100%;
-    font-size: 40px;
-    white-space: initial;
-  }
-
-  .project-title {
-    font-size: 40px;
-  }
-
-  .project-images {
-    max-width: 100%;
-    margin-top: 40px;
-  }
-
-  .project-image {
-    max-width: 100%;
-  }
-
-  .moti-title {
-    margin-left: 10px;
-    margin-top: 40px;
-    font-size: 40px;
-  }
-
-  .moti-image {
-    margin-top: 40px;
-  }
-} */
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  .site-header {
-    padding-bottom: 1rem;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .project-header {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
 
 .projects {
 
@@ -537,4 +421,100 @@ color: #333;
 footer {
   text-align: center;
   margin-top: 50px;
+}
+
+/* === MEDIA QUERIES FOR RESPONSIVENESS === */
+
+/* For tablets and below (768px and under) */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 32px;
+  }
+
+  .nav-links {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-content,
+  .hero-image-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .greeting,
+  .introduction {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .projects-heading,
+  .moti-title {
+    font-size: 36px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .project-header {
+    grid-template-columns: 1fr; /* Stack project cards */
+    padding: 20px 0;
+  }
+
+  .about-section > img {
+    width: 100%;
+  }
+
+  .overlay-text {
+    font-size: 2rem;
+  }
+
+  .bio-text {
+    font-size: 14px;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+  }
+}
+
+/* For very small devices (480px and under) */
+@media (max-width: 480px) {
+  .nav-links {
+    font-size: 16px;
+  }
+
+  .greeting,
+  .introduction {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    font-size: 16px;
+  }
+
+  .activity-card {
+    font-size: 16px;
+  }
+
+  .overlay-text {
+    font-size: 1.5rem;
+  }
 }
