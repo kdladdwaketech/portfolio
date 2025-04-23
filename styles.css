@@ -423,98 +423,88 @@ footer {
   margin-top: 50px;
 }
 
-/* === MEDIA QUERIES FOR RESPONSIVENESS === */
-
-/* For tablets and below (768px and under) */
 @media (max-width: 768px) {
-  .site-title {
-    font-size: 32px;
-  }
-
   .nav-links {
-    font-size: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
+  .nav-links a {
+    font-size: 20px;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
   }
 
   .hero-content,
   .hero-image-container {
     width: 100%;
-    margin: 0;
+    margin-left: 0 auto;
+    padding: 0 16px
+  }
+
+  .hero-text {
+    font-size: 32px;
+    align-items: center;
+    text-align: left;
+    word-wrap: break-word;
   }
 
   .greeting,
-  .introduction {
-    font-size: 36px;
-  }
-
+  .introduction,
   .description {
-    font-size: 18px;
-  }
-
-  .projects-heading,
-  .moti-title {
-    font-size: 36px;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .project-header {
-    grid-template-columns: 1fr; /* Stack project cards */
-    padding: 20px 0;
-  }
-
-  .about-section > img {
-    width: 100%;
-  }
-
-  .overlay-text {
-    font-size: 2rem;
-  }
-
-  .bio-text {
-    font-size: 14px;
-  }
-
-  .contact-section h2 {
-    font-size: 32px;
+    font-size: 24px;
+    text-align: left;
+    word-wrap: break-word;
   }
 }
 
-/* For very small devices (480px and under) */
-@media (max-width: 480px) {
-  .nav-links {
-    font-size: 16px;
+@media (max-width: 768px) {
+  .project-header {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 20px 0;
+    gap: 24px;
   }
 
-  .greeting,
-  .introduction {
+  .polaroid {
+    max-width: 100%;
+  }
+
+  .caption {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 16px;
+  }
+
+  section h1,
+  section h2 {
     font-size: 28px;
+    text-align: center;
   }
 
-  .description {
+  section p {
     font-size: 16px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
-  }
-
-  .contact-form button {
-    font-size: 16px;
-  }
-
-  .activity-card {
-    font-size: 16px;
-  }
-
-  .overlay-text {
-    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: left;
   }
 }
