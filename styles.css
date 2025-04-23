@@ -354,7 +354,7 @@ body {
 
 
 /* Media queries for responsive design */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .portfolio-container {
     padding-bottom: 100px;
   }
@@ -451,15 +451,29 @@ body {
   .moti-image {
     margin-top: 40px;
   }
+} */
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .site-header {
+    padding-bottom: 1rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
-/* ----------------------------- */
-/* Projects Section (Cleaned) */
-/* ----------------------------- */
 
 .projects {
-/* background-color: #d0d8c1; */
+
 width: 100%;
 }
 
@@ -478,7 +492,7 @@ padding: 0 24px;
 
 .project-header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 40px;
   padding: 40px 0;
   justify-items: center;
@@ -493,7 +507,7 @@ padding: 0 24px;
               0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #d0d8c1;
   border-radius: 8px;
-  /* overflow: hidden; */
+ 
 }
 
 .container {
@@ -501,7 +515,7 @@ overflow: hidden;
 }
 
 .container img {
-  height: 300px; /* or whatever size you want */
+  height: 300px; 
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease-out;
